@@ -1,0 +1,34 @@
+// $theme-colors: (
+//     "primary": #eee,
+//     "danger": #ff4136
+//     );
+
+@import "bootstrap";
+
+.icon-desc {
+    display:none;
+};
+
+@media (max-width: 768px) {
+    .icon-desc {
+        display:inline;
+    };
+    .svg-inline--fa {
+        font-size: 18px !important;
+    };
+};
+
+// .edIcon path {
+//     fill: $red;
+//     stroke: $red !important;
+// };
+
+// .edIcon line {
+//     fill: $red;
+//     stroke: $red !important;
+// };
+
+// .edIcon circle {
+//     fill: $red;
+//     stroke: $red !important;
+// };
