@@ -1,6 +1,6 @@
 import * as React from "react";
-const projects = () => {
-    return(<p>penis</p>)
+const Projects = () => {
+    return(<p>test</p>)
 }
 
-export default projects
+export default Projects
