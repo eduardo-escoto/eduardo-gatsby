@@ -8,7 +8,7 @@ import EdIcon from "../svg/edlogoFinal_circle_clipped_thick.svg";
 const Navbar = () => {
   return (
     <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top border-bottom">
-      <div class="container-fluid">
+      <div class="container">
         <Link
           class="navbar-brand"
           activeClassName="navbar-brand"
