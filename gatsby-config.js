@@ -9,10 +9,43 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-svg",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-fontawesome-css",
+    // "gatsby-plugin-mdx",
+    // {
+    //   resolve: `gatsby-plugin-mdx`,
+    //   options: {
+    //     extensions: [".mdx", ".md"],
+    //     gatsbyRemarkPlugins: [
+    //       {
+    //         resolve: `gatsby-remark-highlight-code`,
+    //         options: {
+    //           theme: "material",
+    //           terminal: "carbon",
+    //           lineNumbers: true
+    //         }
+    //       },
+    //     ],
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-codemirror`,
+            options: {
+              // CSS class suffix to be used for produced `<pre/>` blocks.
+              // Default value is "default", which adds "cm-s-default" class.
+              // This class name matches
+              theme: "default"
+            }
+          }
+        ]
+      }
+    }, 
     {
       resolve: "gatsby-plugin-sass",
       sassOptions: {
