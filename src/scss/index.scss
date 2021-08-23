@@ -9,6 +9,10 @@
     display:none;
 };
 
+body {
+    padding-top: 107px;
+};
+
 @media (max-width: 768px) {
     .icon-desc {
         display:inline;

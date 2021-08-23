@@ -16,7 +16,7 @@ const Navbar = () => {
           style={{ fontSize: "25px" }}
         >
           <EdIcon
-            width="80"
+            width="60"
             class="d-inline-block align-text-center edIcon me-3"
           />
           Eduardo Escoto
@@ -35,20 +35,20 @@ const Navbar = () => {
         <div class="collapse navbar-collapse" id="nav_dropdown">
           <ul class="navbar-nav me-auto ms-auto" style={{ fontSize: "18px" }}>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/">
+              <Link classname="nav-link" activeClassName="nav-link" aria-current="page" to="/">
                 About
-              </a>
+              </Link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/projects">
                 Projects
               </a>
             </li>
-            <li class="nav-item">
+            {/* <li class="nav-item">
               <a class="nav-link disabled" href="/blogs" aria-disabled="true">
                 Blogs
               </a>
-            </li>
+            </li> */}
             <li class="icon-desc"><hr class="dropdown-divider"/></li>
           </ul>
           <ul class="navbar-nav navbar-right">
