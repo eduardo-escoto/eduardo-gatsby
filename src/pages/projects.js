@@ -31,6 +31,8 @@ const ProjectCard = ({ frontmatter, timeToRead, slug }) => (
             <a
               href={frontmatter.githubUri}
               class="btn btn-sm btn-outline-secondary"
+              target="_blank"
+              rel="noreferrer"
             >
               Project Repo <FontAwesomeIcon icon={faGithub} />
             </a>

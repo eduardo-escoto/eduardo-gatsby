@@ -82,7 +82,7 @@ const ProjectCard = ({ frontmatter, timeToRead, slug }) => (
       <GatsbyImage
         class="bd-placeholder-img card-img-top"
         width="100%"
-        height="225"
+        height="230"
         role="img"
         aria-label="Placeholder: Thumbnail"
         // fluid={frontmatter.featuredImage.childImageSharp.fluid}
@@ -102,6 +102,8 @@ const ProjectCard = ({ frontmatter, timeToRead, slug }) => (
             <a
               href={frontmatter.githubUri}
               class="btn btn-sm btn-outline-secondary"
+              target="_blank"
+              rel="noreferrer"
             >
               Project Repo <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -163,7 +165,7 @@ export const query = graphql`
           githubUri
           featuredImage {
             childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED)
+              gatsbyImageData(layout:CONSTRAINED, width: 400)
             }
           }
         }
