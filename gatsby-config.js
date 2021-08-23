@@ -24,14 +24,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "./src/svg/edlogoFinal_circle_clipped_thick_icon.svg",
+        icon: "./svg/edlogoFinal_circle_clipped_thick_icon.svg",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./images/",
       },
       // __key: "images",
     },

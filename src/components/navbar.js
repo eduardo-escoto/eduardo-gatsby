@@ -7,7 +7,7 @@ import {
   faSpotify,
 } from "@fortawesome/free-brands-svg-icons";
 import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
-import EdIcon from "../svg/edlogoFinal_circle_clipped_thick.svg";
+import EdIcon from "../../svg/edlogoFinal_circle_clipped_thick.svg";
 
 const socialLinks = [
   {
