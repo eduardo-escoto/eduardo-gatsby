@@ -33,7 +33,14 @@ module.exports = {
         name: "images",
         path: "./src/images/",
       },
-      __key: "images",
+      // __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'projects',
+        path: './projects',
+      }
     },
     {
       resolve: `gatsby-plugin-google-gtag`,

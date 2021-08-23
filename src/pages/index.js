@@ -9,10 +9,44 @@ import {
   faSpotify,
 } from "@fortawesome/free-brands-svg-icons";
 import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
+import { graphql } from "gatsby"; // highlight-line
 import "../scss/pages.scss";
 
+const socialLinks = [
+  {
+    type: "Resume",
+    uri: "https://www.linkedin.com/in/eduardo-exists/",
+    icon: faFileAlt,
+  },
+  {
+    type: "LinkedIn",
+    uri: "https://www.linkedin.com/in/eduardo-exists/",
+    icon: faLinkedinIn,
+  },
+  {
+    type: "Github",
+    uri: "https://www.linkedin.com/in/eduardo-exists/",
+    icon: faGithub,
+  },
+  {
+    type: "Spotify",
+    uri: "https://www.linkedin.com/in/eduardo-exists/",
+    icon: faSpotify,
+  },
+];
 
-const IndexPage = () => {
+const socialsLinksListItem = ({ type, uri, icon }) => (
+  <li class="list-inline-item mx-2 px-1">
+    <OutLink href={uri}>
+      <FontAwesomeIcon icon={icon} />
+    </OutLink>
+  </li>
+);
+
+const IndexPage = ({ data }) => {
+  const socialLinksList = socialLinks.map((socialLink) =>
+    socialsLinksListItem(socialLink)
+  );
   return (
     <div class="container-md">
       <Navbar />
@@ -32,28 +66,7 @@ const IndexPage = () => {
                   </OutLink>
                 </li>
               </ul>
-              <ul class="list-inline ps-3 mb-0 fs-3">
-                <li class="list-inline-item me-3 px-1">
-                  <OutLink href="https://www.linkedin.com/in/eduardo-exists/">
-                    <FontAwesomeIcon icon={faLinkedinIn} />
-                  </OutLink>
-                </li>
-                <li class="list-inline-item px-1">
-                  <OutLink href="https://github.com/eduardo-exists">
-                    <FontAwesomeIcon icon={faGithub} />
-                  </OutLink>
-                </li>
-                <li class="list-inline-item ms-3 px-1">
-                  <OutLink href="https://github.com/eduardo-exists">
-                    <FontAwesomeIcon icon={faFileAlt} />
-                  </OutLink>
-                </li>
-                <li class="list-inline-item mx-3 px-1">
-                  <OutLink href="https://open.spotify.com/user/maneddyawesome?si=8065cf7d1d6e4a78">
-                    <FontAwesomeIcon icon={faSpotify} />
-                  </OutLink>
-                </li>
-              </ul>
+              <ul class="list-inline ps-3 mb-0 fs-3">{socialLinksList}</ul>
             </div>
             <div class="col-md ms-md-5 pt-md-4 pt-sm-3 text-center">
               <StaticImage
@@ -68,7 +81,7 @@ const IndexPage = () => {
           <div>
             <hr />
             <p>
-              I am a Data Scientist at{" "}
+              Hey there! I'm Ed :) I am a Data Scientist at{" "}
               <OutLink href="https://afiniti.com">Afiniti</OutLink> in
               Washington DC where my work focuses on Applied Artificial
               Intelligence. In my undergrad I completed a double major in
@@ -92,5 +105,19 @@ const IndexPage = () => {
     </div>
   );
 };
+
+export const query = graphql`
+  query {
+    allMdx {
+      nodes {
+        frontmatter {
+          title
+          date
+          frontPage
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
