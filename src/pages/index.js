@@ -59,7 +59,7 @@ const BioSection = () => (
         <OutLink href="https://afiniti.com">Afiniti</OutLink> in Washington DC
         where my work focuses on Applied Artificial Intelligence. In my
         undergrad I completed a double major in Mathematics and Statistics at{" "}
-        <OutLink href="https://https://www.ucsb.edu/">UC Santa Barbara</OutLink>
+        <OutLink href="https://www.ucsb.edu/">UC Santa Barbara</OutLink>
         . Previously, I was a Data Science Intern, and also a Teaching Assistant
         in the{" "}
         <OutLink href="https://cs.ucsb.edu/">
