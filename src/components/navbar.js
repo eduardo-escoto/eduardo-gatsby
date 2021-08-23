@@ -1,36 +1,9 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedinIn,
-  faSpotify,
-} from "@fortawesome/free-brands-svg-icons";
-import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
 import EdIcon from "../../svg/edlogoFinal_circle_clipped_thick.svg";
+import socialLinks from "../config/socialLinks";
 
-const socialLinks = [
-  {
-    type: "Resume",
-    uri: "https://www.linkedin.com/in/eduardo-exists/",
-    icon: faFileAlt,
-  },
-  {
-    type: "LinkedIn",
-    uri: "https://www.linkedin.com/in/eduardo-exists/",
-    icon: faLinkedinIn,
-  },
-  {
-    type: "Github",
-    uri: "https://www.linkedin.com/in/eduardo-exists/",
-    icon: faGithub,
-  },
-  {
-    type: "Spotify",
-    uri: "https://www.linkedin.com/in/eduardo-exists/",
-    icon: faSpotify,
-  },
-];
 
 const pageNavigationLinks = [
   { text: "About", uri: "/", customClasses: "" },
