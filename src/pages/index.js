@@ -124,7 +124,7 @@ const ProjectListSection = ({ data }) => (
       <h2 class="display-5">Featured Projects</h2>
     </div>
     <div class="container-md">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {data.allMdx.nodes.map((nodeData) => (
           <ProjectCard {...nodeData} />
         ))}
@@ -165,7 +165,7 @@ export const query = graphql`
           githubUri
           featuredImage {
             childImageSharp {
-              gatsbyImageData(layout:CONSTRAINED, width: 400)
+              gatsbyImageData(layout:CONSTRAINED, width: 1200)
             }
           }
         }

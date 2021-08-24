@@ -42,7 +42,13 @@ module.exports = {
               // This class name matches
               theme: "default"
             }
-          }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
         ]
       }
     }, 
